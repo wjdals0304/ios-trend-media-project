@@ -18,6 +18,7 @@
 		642228E727194EBC007AB370 /* TvShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642228E627194EBC007AB370 /* TvShowTableViewCell.swift */; };
 		642228E927195E09007AB370 /* TvShowSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642228E827195E09007AB370 /* TvShowSearchViewController.swift */; };
 		642228EB27195FBA007AB370 /* TvShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642228EA27195FBA007AB370 /* TvShowDetailViewController.swift */; };
+		644D2CC3271BF3370017D17A /* TvShowSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		642228E627194EBC007AB370 /* TvShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowTableViewCell.swift; sourceTree = "<group>"; };
 		642228E827195E09007AB370 /* TvShowSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowSearchViewController.swift; sourceTree = "<group>"; };
 		642228EA27195FBA007AB370 /* TvShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailViewController.swift; sourceTree = "<group>"; };
+		644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowSearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				642228E427194CC0007AB370 /* TvShow.swift */,
 				642228D4271947E9007AB370 /* Main.storyboard */,
 				642228E827195E09007AB370 /* TvShowSearchViewController.swift */,
+				644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */,
 				642228EA27195FBA007AB370 /* TvShowDetailViewController.swift */,
 				642228D7271947EB007AB370 /* Assets.xcassets */,
 				642228D9271947EB007AB370 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				642228E927195E09007AB370 /* TvShowSearchViewController.swift in Sources */,
 				642228D1271947E9007AB370 /* SceneDelegate.swift in Sources */,
 				642228E327194BFF007AB370 /* TvShowInformation.swift in Sources */,
+				644D2CC3271BF3370017D17A /* TvShowSearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

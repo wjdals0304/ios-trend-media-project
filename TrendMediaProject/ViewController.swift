@@ -50,7 +50,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         cell.posterImage?.image = UIImage(named: postImageTitle)
         cell.rateLabel?.text = String(row.rate)
-        
+        cell.releaseDateLabel?.text = row.releaseDate
+        cell.starringListLabel?.text = row.starring
+                
         return cell
     
     }
