@@ -85,6 +85,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             return
         }
     
+         let row = tvShowList.tvShow[indexPath.row]
+         
+         vc.tvShowData = row 
+         
+         
         self.navigationController?.pushViewController(vc, animated: true)
         
         
