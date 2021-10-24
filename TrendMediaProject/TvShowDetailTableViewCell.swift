@@ -10,7 +10,7 @@ import UIKit
 class TvShowDetailTableViewCell: UITableViewCell {
 
     
-    @IBOutlet var imageLabel: UIImageView!
+    @IBOutlet var starImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subTitleLabel: UILabel!
     

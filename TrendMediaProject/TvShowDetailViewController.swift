@@ -12,6 +12,7 @@ class TvShowDetailViewController: UIViewController,UITableViewDataSource,UITable
     @IBOutlet var detailTableView: UITableView!
     @IBOutlet var detailTitleLabel: UILabel!
     
+  
     // Data pass
     var tvShowData : TvShow?
     
@@ -23,10 +24,6 @@ class TvShowDetailViewController: UIViewController,UITableViewDataSource,UITable
         
         detailTitleLabel.text = "출연/제작"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(closeButtonClicked))
-
-
-
-
     }
     
     @objc
@@ -52,20 +49,24 @@ class TvShowDetailViewController: UIViewController,UITableViewDataSource,UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TvShowDetailTableViewCell" ,for : indexPath ) as? TvShowDetailTableViewCell else { return UITableViewCell() }
-            
         
-        cell.titleLabel?.text = tvShowData?.title
-        cell.subTitleLabel?.text = tvShowData?.overview
+        guard let starringList = tvShowData?.starring.split(separator: ",") else {
+            return UITableViewCell()
+        }
+
+        cell.titleLabel?.text = String(starringList[indexPath.item])
+        cell.subTitleLabel?.text = String(starringList[indexPath.item])
         
+        let postImageTitle = tvShowData?.title.lowercased().replacingOccurrences(of: " ", with: "_")
         
-        
-        
+        cell.starImageView?.image = UIImage(named:postImageTitle ?? "")
+    
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-
         return UIScreen.main.bounds.height / 5
         
     }

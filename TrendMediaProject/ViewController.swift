@@ -49,7 +49,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.tvShowTitleLabel?.text = row.title
         
         cell.posterImage?.image = UIImage(named: postImageTitle)
-        cell.rateLabel?.text = String(row.rate)
+        cell.rateLabel?.text = "평점 : " + String(row.rate)
         cell.releaseDateLabel?.text = row.releaseDate
         cell.starringListLabel?.text = row.starring
                 
@@ -81,16 +81,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     // cell 선택 시
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TvShowDetailViewController") as? TvShowDetailViewController else {
-            return
-        }
-    
-         let row = tvShowList.tvShow[indexPath.row]
-         
-         vc.tvShowData = row 
-         
-         
-        self.navigationController?.pushViewController(vc, animated: true)
+         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TvShowDetailViewController") as? TvShowDetailViewController else {
+             return
+         }
+     
+          let row = tvShowList.tvShow[indexPath.row]
+          
+          vc.tvShowData = row
+          
+          
+         self.navigationController?.pushViewController(vc, animated: true)
         
         
     }
