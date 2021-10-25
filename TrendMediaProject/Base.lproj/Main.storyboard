@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrJ-EZ-Ikn">
-                                <rect key="frame" x="327" y="49" width="67" height="92"/>
+                                <rect key="frame" x="327" y="100" width="67" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="3Aj-72-NpB"/>
+                                    <constraint firstAttribute="height" constant="50" id="3Aj-72-NpB"/>
                                     <constraint firstAttribute="width" constant="67" id="NpT-U2-x8O"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -29,12 +30,8 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jp5-0x-zem">
-                                <rect key="frame" x="0.0" y="278" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="C5g-S4-cW2"/>
-                                    <constraint firstAttribute="height" constant="618" id="rWy-8E-Hbh"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TvShowTableViewCell" rowHeight="456" id="iv0-RQ-mpN" customClass="TvShowTableViewCell" customModule="TrendMediaProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="456"/>
@@ -53,8 +50,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="242" verticalHuggingPriority="240" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svK-9X-mwE">
-                                                    <rect key="frame" x="30" y="60" width="334" height="267"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="242" verticalHuggingPriority="240" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="svK-9X-mwE">
+                                                    <rect key="frame" x="30" y="57" width="334" height="267"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="267" id="WWZ-2e-L5X"/>
                                                         <constraint firstAttribute="width" constant="280" id="grl-7H-eqT"/>
@@ -142,31 +139,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P02-fA-y4D">
-                                <rect key="frame" x="50" y="168" width="314" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="P02-fA-y4D">
+                                <rect key="frame" x="40" y="180" width="334" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-zz-5cS">
-                                        <rect key="frame" x="0.0" y="0.0" width="98" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="film" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-Jo-8pd">
-                                        <rect key="frame" x="108" y="0.0" width="98" height="50"/>
+                                        <rect key="frame" x="119.5" y="0.0" width="95" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="tv" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONC-jv-jga">
-                                        <rect key="frame" x="216" y="0.0" width="98" height="50"/>
+                                        <rect key="frame" x="238.5" y="0.0" width="95.5" height="50"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="book" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="book" catalog="system" title=""/>
                                         <connections>
-                                            <segue destination="hb5-tI-U6P" kind="show" id="09C-en-Eph"/>
+                                            <action selector="bookButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44L-nX-JGt"/>
+                                            <action selector="bookClickButton:" destination="0t8-Vq-I3m" eventType="touchUpInside" id="yTv-QZ-3Pt"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="314" id="rII-Bh-ebD"/>
-                                    <constraint firstAttribute="height" priority="750" constant="100" id="sU7-T3-6No"/>
+                                    <constraint firstAttribute="height" constant="50" id="sU7-T3-6No"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -175,12 +172,12 @@
                         <constraints>
                             <constraint firstItem="sL1-Vv-Bzo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="68" id="1Dx-0q-WJR"/>
                             <constraint firstItem="jp5-0x-zem" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1KW-nb-wGD"/>
-                            <constraint firstItem="P02-fA-y4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Cd2-K5-Bzl"/>
+                            <constraint firstItem="P02-fA-y4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Cd2-K5-Bzl"/>
                             <constraint firstItem="sL1-Vv-Bzo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="149" id="E2p-BZ-VhO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P02-fA-y4D" secondAttribute="trailing" constant="50" id="OmY-PS-9hL"/>
-                            <constraint firstItem="jp5-0x-zem" firstAttribute="top" secondItem="P02-fA-y4D" secondAttribute="bottom" constant="60" id="UAu-4m-RdM"/>
-                            <constraint firstItem="P02-fA-y4D" firstAttribute="top" secondItem="UrJ-EZ-Ikn" secondAttribute="bottom" constant="27" id="YVg-i6-xqW"/>
-                            <constraint firstItem="UrJ-EZ-Ikn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="49" id="epD-dZ-E7X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P02-fA-y4D" secondAttribute="trailing" constant="40" id="OmY-PS-9hL"/>
+                            <constraint firstItem="jp5-0x-zem" firstAttribute="top" secondItem="P02-fA-y4D" secondAttribute="bottom" constant="20" id="UAu-4m-RdM"/>
+                            <constraint firstItem="P02-fA-y4D" firstAttribute="top" secondItem="UrJ-EZ-Ikn" secondAttribute="bottom" constant="30" id="YVg-i6-xqW"/>
+                            <constraint firstItem="UrJ-EZ-Ikn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="epD-dZ-E7X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UrJ-EZ-Ikn" secondAttribute="trailing" constant="20" id="oMy-xM-guK"/>
                             <constraint firstAttribute="bottom" secondItem="jp5-0x-zem" secondAttribute="bottom" id="vUn-G0-kyW"/>
                             <constraint firstItem="jp5-0x-zem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zZi-Jz-GG2"/>
@@ -194,24 +191,57 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="0t8-Vq-I3m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="76.811594202898561" y="-386.38392857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2C1-iB-Dsz">
+        <!--Book Collection View Controller-->
+        <scene sceneID="whh-vS-dOs">
             <objects>
-                <viewController id="hb5-tI-U6P" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uk8-JR-lc6">
+                <viewController storyboardIdentifier="BookCollectionViewController" id="TZL-Jb-sj0" customClass="BookCollectionViewController" customModule="TrendMediaProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7dQ-JN-oUB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Eki-ai-4Gn"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1yh-1B-Waj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6sZ-R7-w9o">
+                                    <size key="itemSize" width="239" height="198"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCollectionViewCell" id="nZh-do-UXc">
+                                        <rect key="frame" x="87.5" y="0.0" width="239" height="198"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="n4W-zw-DiV">
+                                            <rect key="frame" x="0.0" y="0.0" width="239" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="239" height="198"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="79o-Jc-7Gp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1yh-1B-Waj" firstAttribute="leading" secondItem="79o-Jc-7Gp" secondAttribute="leading" id="0o8-Xg-6hE"/>
+                            <constraint firstItem="79o-Jc-7Gp" firstAttribute="trailing" secondItem="1yh-1B-Waj" secondAttribute="trailing" id="26T-yC-grx"/>
+                            <constraint firstItem="79o-Jc-7Gp" firstAttribute="bottom" secondItem="1yh-1B-Waj" secondAttribute="bottom" id="5fk-Cu-7FC"/>
+                            <constraint firstItem="1yh-1B-Waj" firstAttribute="top" secondItem="79o-Jc-7Gp" secondAttribute="top" id="o88-Gq-vPh"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QYy-sx-uxf"/>
+                    <navigationItem key="navigationItem" id="0c5-g2-mCc"/>
+                    <connections>
+                        <outlet property="bookCollectionView" destination="1yh-1B-Waj" id="9eb-ow-tU9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zkc-wp-yl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrH-lg-ao0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="318"/>
+            <point key="canvasLocation" x="60.869565217391312" y="346.875"/>
         </scene>
         <!--Tv Show Detail View Controller-->
         <scene sceneID="5dU-5O-xT6">

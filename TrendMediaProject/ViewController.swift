@@ -78,6 +78,26 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     }
     
+    
+    
+    @IBAction func bookButtonClicked(_ sender: UIButton) {
+        
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookCollectionViewController") as! BookCollectionViewController
+        
+        let nav = UINavigationController(rootViewController: vc)
+        
+        
+        nav.modalPresentationStyle = .fullScreen
+        
+        
+        self.present(nav,animated: true , completion: nil)
+        
+    }
+    
+    
+    
+    
     // cell 선택 시
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
