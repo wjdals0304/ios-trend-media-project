@@ -9,9 +9,11 @@ import UIKit
 
 class TvShowSearchTableViewCell: UITableViewCell {
 
-    
+  
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var overViewLabel: UILabel!
+    @IBOutlet var lbl2: UILabel!
+  
     @IBOutlet var showTitleImage: UIImageView!
     
     static var identifier : String = "TvShowSearchCell"

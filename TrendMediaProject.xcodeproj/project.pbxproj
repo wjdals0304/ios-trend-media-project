@@ -21,8 +21,12 @@
 		6447B9E0272676D20002610E /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447B9DF272676D20002610E /* BookCollectionViewController.swift */; };
 		6447B9E327267A380002610E /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447B9E127267A380002610E /* BookCollectionViewCell.swift */; };
 		6447B9E427267A380002610E /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6447B9E227267A380002610E /* BookCollectionViewCell.xib */; };
+		6447B9EE2727A7EB0002610E /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447B9ED2727A7EB0002610E /* MovieModel.swift */; };
 		644D2CC3271BF3370017D17A /* TvShowSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */; };
 		64630D4E271D88BC00D20B1B /* TvShowDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64630D4D271D88BC00D20B1B /* TvShowDetailTableViewCell.swift */; };
+		64B35F4F2727EF2300DB1096 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F4E2727EF2300DB1096 /* Alamofire */; };
+		64B35F522727F33200DB1096 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F512727F33200DB1096 /* SwiftyJSON */; };
+		64B35F552727F36600DB1096 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F542727F36600DB1096 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,7 @@
 		6447B9DF272676D20002610E /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		6447B9E127267A380002610E /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		6447B9E227267A380002610E /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		6447B9ED2727A7EB0002610E /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowSearchTableViewCell.swift; sourceTree = "<group>"; };
 		64630D4D271D88BC00D20B1B /* TvShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B35F552727F36600DB1096 /* Kingfisher in Frameworks */,
+				64B35F522727F33200DB1096 /* SwiftyJSON in Frameworks */,
+				64B35F4F2727EF2300DB1096 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,7 @@
 		642228CD271947E9007AB370 /* TrendMediaProject */ = {
 			isa = PBXGroup;
 			children = (
+				6447B9ED2727A7EB0002610E /* MovieModel.swift */,
 				642228CE271947E9007AB370 /* AppDelegate.swift */,
 				642228D0271947E9007AB370 /* SceneDelegate.swift */,
 				642228D2271947E9007AB370 /* ViewController.swift */,
@@ -113,6 +122,11 @@
 			dependencies = (
 			);
 			name = TrendMediaProject;
+			packageProductDependencies = (
+				64B35F4E2727EF2300DB1096 /* Alamofire */,
+				64B35F512727F33200DB1096 /* SwiftyJSON */,
+				64B35F542727F36600DB1096 /* Kingfisher */,
+			);
 			productName = TrendMediaProject;
 			productReference = 642228CB271947E9007AB370 /* TrendMediaProject.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +155,11 @@
 				Base,
 			);
 			mainGroup = 642228C2271947E9007AB370;
+			packageReferences = (
+				64B35F4D2727EF2300DB1096 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				64B35F502727F33200DB1096 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				64B35F532727F36600DB1096 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 642228CC271947E9007AB370 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,6 +194,7 @@
 				6447B9E0272676D20002610E /* BookCollectionViewController.swift in Sources */,
 				642228CF271947E9007AB370 /* AppDelegate.swift in Sources */,
 				642228E527194CC0007AB370 /* TvShow.swift in Sources */,
+				6447B9EE2727A7EB0002610E /* MovieModel.swift in Sources */,
 				64630D4E271D88BC00D20B1B /* TvShowDetailTableViewCell.swift in Sources */,
 				642228E927195E09007AB370 /* TvShowSearchViewController.swift in Sources */,
 				642228D1271947E9007AB370 /* SceneDelegate.swift in Sources */,
@@ -398,6 +418,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64B35F4D2727EF2300DB1096 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		64B35F502727F33200DB1096 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		64B35F532727F36600DB1096 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64B35F4E2727EF2300DB1096 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64B35F4D2727EF2300DB1096 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		64B35F512727F33200DB1096 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64B35F502727F33200DB1096 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		64B35F542727F36600DB1096 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64B35F532727F36600DB1096 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 642228C3271947E9007AB370 /* Project object */;
 }
