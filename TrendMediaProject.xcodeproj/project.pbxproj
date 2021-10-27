@@ -27,6 +27,8 @@
 		64B35F4F2727EF2300DB1096 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F4E2727EF2300DB1096 /* Alamofire */; };
 		64B35F522727F33200DB1096 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F512727F33200DB1096 /* SwiftyJSON */; };
 		64B35F552727F36600DB1096 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 64B35F542727F36600DB1096 /* Kingfisher */; };
+		64B35F65272925B500DB1096 /* NaverSearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B35F64272925B500DB1096 /* NaverSearchAPIManager.swift */; };
+		64B35F6927297FF400DB1096 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B35F6827297FF400DB1096 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		6447B9ED2727A7EB0002610E /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowSearchTableViewCell.swift; sourceTree = "<group>"; };
 		64630D4D271D88BC00D20B1B /* TvShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailTableViewCell.swift; sourceTree = "<group>"; };
+		64B35F64272925B500DB1096 /* NaverSearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchAPIManager.swift; sourceTree = "<group>"; };
+		64B35F6827297FF400DB1096 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,10 @@
 				6447B9E127267A380002610E /* BookCollectionViewCell.swift */,
 				6447B9E227267A380002610E /* BookCollectionViewCell.xib */,
 				6447B9DF272676D20002610E /* BookCollectionViewController.swift */,
+				64B35F6827297FF400DB1096 /* Constants.swift */,
 				642228E827195E09007AB370 /* TvShowSearchViewController.swift */,
 				644D2CC2271BF3370017D17A /* TvShowSearchTableViewCell.swift */,
+				64B35F64272925B500DB1096 /* NaverSearchAPIManager.swift */,
 				642228EA27195FBA007AB370 /* TvShowDetailViewController.swift */,
 				64630D4D271D88BC00D20B1B /* TvShowDetailTableViewCell.swift */,
 				642228D7271947EB007AB370 /* Assets.xcassets */,
@@ -193,9 +199,11 @@
 				642228D3271947E9007AB370 /* ViewController.swift in Sources */,
 				6447B9E0272676D20002610E /* BookCollectionViewController.swift in Sources */,
 				642228CF271947E9007AB370 /* AppDelegate.swift in Sources */,
+				64B35F6927297FF400DB1096 /* Constants.swift in Sources */,
 				642228E527194CC0007AB370 /* TvShow.swift in Sources */,
 				6447B9EE2727A7EB0002610E /* MovieModel.swift in Sources */,
 				64630D4E271D88BC00D20B1B /* TvShowDetailTableViewCell.swift in Sources */,
+				64B35F65272925B500DB1096 /* NaverSearchAPIManager.swift in Sources */,
 				642228E927195E09007AB370 /* TvShowSearchViewController.swift in Sources */,
 				642228D1271947E9007AB370 /* SceneDelegate.swift in Sources */,
 				6447B9E327267A380002610E /* BookCollectionViewCell.swift in Sources */,

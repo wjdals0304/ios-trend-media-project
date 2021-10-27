@@ -10,12 +10,12 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
+class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate, UITableViewDataSourcePrefetching {
  
-
     var movieData: [MovieModel] = []
     @IBOutlet var tableView: UITableView!
     
+    var startPage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITabl
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         navigationItem.title = "영화검색"
         
+        tableView.prefetchDataSource = self
         
         fetchMovieData()
         
@@ -67,47 +68,55 @@ class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITabl
     func fetchMovieData(){
         
         //네이버 영화 API 호출
-        if let query = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
-            
-            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
-            let header : HTTPHeaders =  [
-                "X-Naver-Client-Id": "oRRaT25yO8saX0XxwuJF",
-                "X-Naver-Client-Secret" : "h_9RjwFW3S",
-            ]
-            
-            
-            AF.request(url, method: .get,headers : header ).validate().responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    
-                    let json = JSON(value)
-                    
-                    for item in json["items"].arrayValue {
-                        
-                        let value = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
-                        let image = item["image"].stringValue
-                        let link = item["link"].stringValue
-                        let userRating = item["userRating"].stringValue
-                        let sub = item["subtitle"].stringValue
-                    
-                        
-                        let data = MovieModel(titleData: value, imageData: image, linkData: link, userRatingData: userRating, subtitle: sub)
-                        
-                        
-                        self.movieData.append(data)
-                        
-                    }
-                    
-                    
-                    self.tableView.reloadData()
+        guard let query = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+            return
+        }
+        NaverSearchAPIManager.shared.fetchMovieData(query: query, startPage: startPage) { statusCode, json in
 
-                case .failure(let error):
-                    print(error)
+            switch statusCode {
+            case 200:
+                
+                for item in json["items"].arrayValue {
+                    
+                    let value = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+                    let image = item["image"].stringValue
+                    let link = item["link"].stringValue
+                    let userRating = item["userRating"].stringValue
+                    let sub = item["subtitle"].stringValue
+                
+                    
+                    let data = MovieModel(titleData: value, imageData: image, linkData: link, userRatingData: userRating, subtitle: sub)
+                    
+                    self.movieData.append(data)
+                    
                 }
+                
+                self.tableView.reloadData()
+
+            default :
+                print("error")
             }
-            
+        }
+
+
+    }
+    
+    // 셀이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+        for indexPath in indexPaths {
+            if movieData.count - 1 == indexPath.row {
+                startPage += 10
+                fetchMovieData()
+                print("prefetch: \(indexPath)")
+            }
         }
         
+    }
+    
+    //취소
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+//        print("취소 : \(indexPaths)")
     }
     
     
