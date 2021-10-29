@@ -94,7 +94,10 @@ class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITabl
                     
                 }
                 
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+
+                }
 
             default :
                 print("error")
@@ -118,6 +121,8 @@ class TvShowSearchViewController: UIViewController ,UITableViewDataSource,UITabl
     //취소
     func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
       //print("취소 : \(indexPaths)")
+        
+        
     }
     
 }
