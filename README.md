@@ -7,6 +7,7 @@
 
 # 사용 요소 
 - SwiftyJSON , Kingfisher , Alamofire 
+- TableView , CollectionView
 
 
 # 화면 구조 
